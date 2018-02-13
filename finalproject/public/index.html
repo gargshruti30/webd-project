@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +12,30 @@
 </head>
 <body>
 <div class="container-fluid bod">
-    <div class="jumbotron text-center">Libofly</div>
+    <div class="jumbotron text-center">libofly</div>
     <div align="center">
     <div class="search">Search the book on the basis of...</div>
     <button type="button" class="btn btn-danger btn1">Title</button>
+
     <button type="button" class="btn btn-danger btn2">Author</button>
     <button type="button" class="btn btn-danger btn3">Publisher</button>
     <button type="button" class="btn btn-danger btn4">Genre</button>
+
+        <div class="displayy"  style="display:none;">
+        <input id="inp" style="margin-top: 20px;" placeholder="Enter">
+        <button id="sub" >Submit</button>
+        </div>
     </div>
     <br>
-    <div class="container" style="width: 60%">
+    <div class="container con" style="width: 60%">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
-            <!-- Indicators -->
+
             <ol class="carousel-indicators">
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
             </ol>
 
-            <!-- Wrapper for slides -->
             <div class="carousel-inner">
                 <div class="item active" >
                     <div style="display: flex; flex-wrap: wrap">
@@ -76,6 +82,7 @@
             </a>
         </div>
     </div>
+    <div id="result"></div>
 
 </div>
 <!--<div id="content"></div>-->
@@ -88,6 +95,7 @@
         <!--}-->
     <!--}-->
 <!--</script>-->
-<!--<script src="https://www.googleapis.com/books/v1/volumes&callback=handleResponse"></script>-->
+
 </body>
+<script src="client1.js"></script>
 </html>
