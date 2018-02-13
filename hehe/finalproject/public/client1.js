@@ -25,7 +25,7 @@ btn1.on('click',function(){
 
                     var item = x.items[i];
 
-                    document.getElementById("result").innerHTML +=`<br><li id="i" onclick="call(this)"><a href="http://localhost:5000">${item.volumeInfo.title}</a></li>`;
+                    document.getElementById("result").innerHTML +=`<br><li id="i" onclick="call(this)"><a href="http://localhost:5000/main">${item.volumeInfo.title}</a></li>`;
                 }
             }
         };
