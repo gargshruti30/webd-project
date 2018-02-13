@@ -1,0 +1,15 @@
+.jumbotron{
+    font-size: 50px;
+    font-weight: bold;
+    padding-bottom: 20px !important;
+    padding-top: 20px !important;
+
+}
+.btn1{
+    width:13%;
+    font-size: 20px;
+    margin-right: 8%;
+}
+.search{
+    font-size: 25px;
+}
