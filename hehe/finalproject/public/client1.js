@@ -26,7 +26,7 @@ btn1.on('click',function(){
 
                     var item = x.items[i];
                     ar[i]=item.id;
-                    document.getElementById("result").innerHTML +=`<br><li id=${i} onclick="call(this)"><a href="http://localhost:5000/main">${item.volumeInfo.title}</a></li>`;
+                    document.getElementById("result").innerHTML +=`<br><li id=${i} ><a href="http://localhost:5000/main?val=${item.id}">${item.volumeInfo.title}</a></li>`;
                 }
             }
         };
@@ -52,17 +52,19 @@ btn4.on('click',function() {
     $('.displayy').css('display', 'block');
 
 });
-function call(e){
-    let id=e.id;
-    let val=(ar[id]);
-    console.log(val);
-    let URL=`http://localhost:5000?val=${val}`;
-    $.ajax({
-        url:URL,
-        type:'GET',
-        success:function(data){
-
-        }
-    })
-}
+// function call(e){
+//     console.log(e);
+//     let id=e.id;
+//     console.log(e.id);
+//     let val=(ar[id]);
+//     console.log(val);
+//     let URL=`http://localhost:5000/main?val=${val}`;
+//     $.ajax({
+//         url:URL,
+//         type:'GET',
+//         success:function(data){
+//
+//         }
+//     })
+// }
 

@@ -12,17 +12,12 @@ btn1.on('click',function(){
 
     $('#sub').on('click',function ()
     {
-<<<<<<< HEAD
-        let value=$('#inp').val();
-=======
+
 let value=$('#inp').val();
->>>>>>> eae699ec536f858a16bcde0700de024e683502e5
         let xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200)
             {
-<<<<<<< HEAD
-
                 let x=this.responseText;
                 x=JSON.parse(x);
                 document.getElementById("result").innerHTML=" ";
@@ -35,15 +30,6 @@ let value=$('#inp').val();
             }
         };
         xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes?q=${value}`, true);
-=======
-                let x=JSON.parse(this.responseText);
-
-                document.getElementById("result").innerHTML =`${x}`;
-
-            }
-        };
-        xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes?q=harrypotter`, true);
->>>>>>> eae699ec536f858a16bcde0700de024e683502e5
         xhttp.send();
     })
 });
