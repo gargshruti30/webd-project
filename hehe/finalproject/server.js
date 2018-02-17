@@ -32,7 +32,7 @@ app.get('/main',function(req,res){
     };
     // let y=JSON.parse(req.query.val);
     console.log((req.query.val));
-    xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes?q=${req.query.val}`, true);
+    xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes/${req.query.val}`, true);
     xhttp.send();
 
 });
