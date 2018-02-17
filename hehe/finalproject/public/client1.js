@@ -3,6 +3,7 @@ let btn1=$('.btn1');
 let btn2=$('.btn2');
 let btn3=$('.btn3');
 let btn4=$('.btn4');
+let ar=[];
 
 btn1.on('click',function(){
 
@@ -17,15 +18,15 @@ btn1.on('click',function(){
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200)
             {
-
+                ar=[];
                 let x=this.responseText;
                 x=JSON.parse(x);
                 document.getElementById("result").innerHTML=" ";
                 for (var i = 0; i < x.items.length; i++) {
 
                     var item = x.items[i];
-
-                    document.getElementById("result").innerHTML +=`<br><li id="i" onclick="call(this)"><a href="http://localhost:5000/main">${item.volumeInfo.title}</a></li>`;
+                    ar[i]=item.id;
+                    document.getElementById("result").innerHTML +=`<br><li id=${i} onclick="call(this)"><a href="http://localhost:5000/main">${item.volumeInfo.title}</a></li>`;
                 }
             }
         };
@@ -52,10 +53,15 @@ btn4.on('click',function() {
 
 });
 function call(e){
+    let id=e.id;
+    let val=(ar[id]);
+    console.log(val);
+    let URL=`http://localhost:5000?val=${val}`;
     $.ajax({
-        'url':`http://localhost:5000?val=${e.innerHTML}`,
-        'type':'GET',
-        'success':function(data){
+        url:URL,
+        type:'GET',
+        success:function(data){
+
         }
     })
 }

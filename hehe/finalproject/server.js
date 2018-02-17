@@ -8,7 +8,7 @@ app.use(express.static('public'));
 
 
 app.set('view engine','hbs');
-app.set('views','views');//first is fixed...we can change seconds views to any directory;
+app.set('views','views');
 
 app.use(function(req,res,next){
     res.setHeader('Access-Control-Allow-Origin','*');
@@ -30,8 +30,11 @@ app.get('/main',function(req,res){
 
         }
     };
+    // let y=JSON.parse(req.query.val);
+    console.log((req.query));
     xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes?q=${req.query.val}`, true);
     xhttp.send();
+
 });
 app.listen(port,function(){
     console.log("application running on port "+port);
