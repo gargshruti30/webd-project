@@ -26,13 +26,13 @@ app.get('/main',function(req,res){
         if (this.readyState == 4 && this.status == 200)
         {
             let x=this.responseText;
-            res.render('index2',{data:x});
+            res.render('index2',{data:JSON.parse(x)});
 
         }
     };
     // let y=JSON.parse(req.query.val);
-    console.log((req.query));
-    xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes?q=${req.query.val}`, true);
+    console.log((req.query.val));
+    xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes/${req.query.val}`, true);
     xhttp.send();
 
 });
