@@ -26,7 +26,7 @@ app.get('/main',function(req,res){
         if (this.readyState == 4 && this.status == 200)
         {
             let x=this.responseText;
-            res.render('index2',{data:x});
+            res.render('index2',{data:JSON.parse(x)});
 
         }
     };

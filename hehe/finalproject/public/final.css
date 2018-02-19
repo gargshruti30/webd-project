@@ -15,5 +15,33 @@
 }
 
 .inner2{
-    color:red;
+    color: crimson;
+    font-size: 17px;
+}
+.titles{
+   display: flex;
+    flex-wrap: wrap;
+}
+.heading{
+    font-size: 20px;
+    font-family: cursive;
+    font-weight: bold;
+    color: black;
+}
+.info{
+    margin-top: 4px;
+}
+.picture{
+    margin-top: 20px;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 100px;
+}
+.topheading{
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: bolder;
+    text-align: center;
+    color: black;
+    margin-top: 20px ;
 }
