@@ -1,8 +1,10 @@
 .jumbotron{
     font-size: 50px;
     font-weight: bold;
+    color: wheat !important;
     padding-bottom: 20px !important;
     padding-top: 20px !important;
+    background-image: url("https://images2.alphacoders.com/261/thumb-1920-26102.jpg");
 
 }
 .btn1,.btn2,.btn3,.btn4{
@@ -14,34 +16,3 @@
     font-size: 25px;
 }
 
-.inner2{
-    color: crimson;
-    font-size: 17px;
-}
-.titles{
-   display: flex;
-    flex-wrap: wrap;
-}
-.heading{
-    font-size: 20px;
-    font-family: cursive;
-    font-weight: bold;
-    color: black;
-}
-.info{
-    margin-top: 4px;
-}
-.picture{
-    margin-top: 20px;
-    height: 200px;
-    width: 200px;
-    margin-bottom: 100px;
-}
-.topheading{
-    font-size: 40px;
-    font-family: cursive;
-    font-weight: bolder;
-    text-align: center;
-    color: black;
-    margin-top: 20px ;
-}

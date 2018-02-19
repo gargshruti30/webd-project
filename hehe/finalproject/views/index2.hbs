@@ -3,26 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Handlebars</title>
-    <link type="text/css" rel="stylesheet" href="final.css">
+    <link type="text/css" rel="stylesheet" href="final3.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <style>
-    .inner2{
-        color:red;
-    }
 </style>
 <body>
-<div class="outer container-fluid" >
+<div class="outer container" >
+    <div class="topheading">Book Information</div>
     <div class="row">
-        <div class="inner1 col-6"></div>
-        <div class="inner2 col-6">
-            <div class="topheading">Book Information</div>
+        <div class="inner1 col-lg-6 col-md-6">
             <div align="center">
-                <img class="picture" src="{{data.volumeInfo.imageLink.thumbnail}}" alt="Book photo">
+            <img class="picture" src="https://qph.ec.quoracdn.net/main-qimg-dcf7f137d87bce4a20b2a6604b656398-c" alt="Book photo">
             </div>
+        </div>
+        <div class="inner2 col-lg-6 col-md-6">
+
             <div class="titles">
             <div class="heading">Title:</div>
             <div class="info">{{data.volumeInfo.title}} <br></div>
