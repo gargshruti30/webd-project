@@ -10,15 +10,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
-<style>
-</style>
 <body>
-<div class="outer container" >
+<div class="outer container">
     <div class="topheading">Book Information</div>
-    <div class="row">
+    <div class="row" style="display: flex; flex-wrap: wrap">
         <div class="inner1 col">
             <div align="center">
-            <img class="picture" src="{{data.volumeInfo.imageLinks.thumbnail}}" alt="Book photo">
+
+            <img class="picture" src="{{data.volumeInfo.imageLinks.thumbnail}}" alt="Book">
             </div>
         </div>
         <div class="inner2 col">
@@ -51,11 +50,27 @@
             <div class="heading">Preview Link:</div>
             <div class="info"><a href="{{data.volumeInfo.previewLink}}" target="_blank">Click here</a><br></div>
             </div>
-                <button>View pdf</button><br>
         </div>
+
+                <button id="btn">View pdf</button><br>
         </div>
     </div>
 </div>
 </body>
+<script>
+    let btn=$('#btn');
+    btn.on('click',function(){
+        <!--let URL=``;-->
+    <!--$.ajax({-->
+        <!--url:URL,-->
+        <!--type:'GET',-->
+        <!--success:function(data){-->
+       <!--console.log(data);-->
+        <!--}-->
+    <!--})-->
+        window.location = `{{data.accessInfo.webReaderLink}}`;
+
+    })
+</script>
 </html>
 
