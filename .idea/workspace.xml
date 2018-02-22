@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cec75e05-ffd5-4212-bf09-44d9418b9659" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/hehe/.idea/workspace.xml" afterPath="$PROJECT_DIR$/hehe/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/hehe/finalproject/public/final.css" afterPath="$PROJECT_DIR$/hehe/finalproject/public/final.css" />
-      <change beforePath="$PROJECT_DIR$/hehe/finalproject/public/final3.css" afterPath="$PROJECT_DIR$/hehe/finalproject/public/final3.css" />
-      <change beforePath="$PROJECT_DIR$/hehe/finalproject/views/index2.hbs" afterPath="$PROJECT_DIR$/hehe/finalproject/views/index2.hbs" />
-      <change beforePath="$PROJECT_DIR$/hehe/finalproject/views/main.hbs" afterPath="$PROJECT_DIR$/hehe/finalproject/views/main.hbs" />
-    </list>
+    <list default="true" id="cec75e05-ffd5-4212-bf09-44d9418b9659" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -222,12 +215,12 @@
       <workItem from="1519034427573" duration="4192000" />
       <workItem from="1519097746450" duration="2043000" />
       <workItem from="1519116630627" duration="1221000" />
-      <workItem from="1519304330834" duration="2401000" />
+      <workItem from="1519304330834" duration="2997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23669000" />
+    <option name="totallyTimeSpent" value="24265000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1303" height="780" extended-state="6" />
