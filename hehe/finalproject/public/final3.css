@@ -1,8 +1,9 @@
 .inner2{
-    color: crimson;
+    color: black;
     font-size: 17px;
-    margin-top: 20px;
-    border: 2px dashed black;
+    margin-top: 10px;
+    text-align: center;
+
 }
 .heading{
     font-size: 20px;
@@ -15,26 +16,27 @@
 }
 .picture{
     margin-top: 20px;
-    height: 450px;
-    width: 500px;
-    margin-bottom: 100px;
+    height: 300px;
+    width: 300px;
+    border: 5px solid black;
 }
 .topheading{
-    font-size: 40px;
-    font-family: cursive;
+    font-size: 60px;
     font-weight: bolder;
     text-align: center;
     color: black;
-    margin-top: 20px ;
+    margin-top: 10px ;
+    font-family: 'Nanum Pen Script', cursive;
 }
-/*body,html {*/
-    /*height: 100%;*/
-/*}*/
-/*.outer{*/
-    /*background-image: url(https://prodigalthought.files.wordpress.com/2015/12/book-stack.jpg?w=950);*/
-    /*height: 100%;*/
-    /*background-position: center;*/
-    /*background-repeat: no-repeat;*/
-    /*background-size: cover;*/
-    /*opacity: 0.1;*/
-/*}*/
+body,html{
+    height: 100%;
+}
+.outer{
+    /*background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiBJJcyMVKQpcYmpWbPPlxf8UltVzcTIulwtiu7tiw-IEQpSt8);*/
+    /*background-image: url(http://images.all-free-download.com/images/graphiclarge/nostalgic_blue_background_06_hd_pictures_169782.jpg);*/
+    background-image: url(http://s3.gomedia.us/wp-content/uploads/2011/09/Fudgegraphics-Wallpaper-Case-Study-13.jpg);
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

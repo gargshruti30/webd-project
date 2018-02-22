@@ -10,9 +10,12 @@
 .btn1,.btn2,.btn3,.btn4{
     width:13%;
     font-size: 20px;
-    margin-right: 8%;
+    /*margin-right: 8%;*/
+    font-family: 'Kavivanar', cursive;
 }
 .search{
     font-size: 25px;
+    font-family: 'Anton', sans-serif;
+
 }
 
