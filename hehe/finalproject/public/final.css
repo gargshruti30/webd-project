@@ -7,6 +7,16 @@
     background-image: url("https://images2.alphacoders.com/261/thumb-1920-26102.jpg");
 
 }
+#inp{border:none;
+     border-bottom:2px solid green ;
+    text-align:center;
+    outline:none;
+    height:60px;
+    width:500px;
+    font-size:30px;
+
+
+}
 .btn1,.btn2,.btn3,.btn4{
     width:20%;
     text-align:center;
