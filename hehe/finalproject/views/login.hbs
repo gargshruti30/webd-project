@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>USER-LOGIN</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        #navi{
+            background-color:lightgreen;height:100px;
+        }
+    </style>
+</head>
+<body>
+<div id="navi">
+    <span align="left" style="font-size: 40px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LIBOFLY</span>
+    <div align="right">
+    <form action="http://localhost:5000/login" method="post">
+    <input id="inp1" placeholder="enter username" type="text" name="username" style="margin-top:15px" >
+    <input id="inp2" placeholder="enter password" type="password" name="password" style="margin-top:15px" >
+    <input id="btn2" type="submit" value="login" style="margin-top:15px" >
+    </form>
+    </div>
+</div>
+<br><br>
+<div id="a" style="display: flex;flex-wrap: wrap">
+    <div id="a1" style="width: 50%"></div>
+<div align="center" id="a2" style="width: 50%">
+<form action="http://localhost:5000/login" method="post">
+    <input placeholder="first name">
+    <input placeholder="last name"><br><br>
+    <input placeholder="e-mail" type="email"><br><br>
+    <input placeholder="mobile number" type="number"><br><br>
+    <input id="inp3" placeholder="enter username" type="text" name="username"><br><br>
+    <input id="inp4" placeholder="enter password" type="password" name="password"><br><br>
+    <input id="btn3" type="submit" value="sign-up">
+</form>
+</div>
+</div>
+</body>
+<script src="login.js"></script>
+</html>
