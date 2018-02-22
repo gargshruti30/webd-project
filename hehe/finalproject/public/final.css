@@ -21,6 +21,8 @@
     width:20%;
     text-align:center;
     font-size: 20px;
+    /*margin-right: 8%;*/
+    font-family: 'Kavivanar', cursive;
     margin-right: 4%;
     padding :0 !important;
 }
@@ -29,6 +31,8 @@
 }
 .search{
     font-size: 25px;
+    font-family: 'Anton', sans-serif;
+
 }
 
 @media  screen and (max-width:485px){
