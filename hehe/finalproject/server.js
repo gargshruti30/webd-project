@@ -107,6 +107,13 @@ passport.serializeUser(function(a, done) {
     return  done(null,a);
 });
 
+app.get('/abcd',function(req,res){
+    console.log("shruti ka abcd");
+    res.render('main',{});
+
+});
+
+
 passport.deserializeUser(function(a, done) {
 
     if(a){

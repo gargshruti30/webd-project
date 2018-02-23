@@ -13,7 +13,7 @@
 <body>
 <div class="outer container">
     <div class="topheading">Book Information</div>
-    <div class="row" style="display: flex; flex-wrap: wrap">
+    <div class="row">
         <div class="inner1 col">
             <div align="center">
 
@@ -46,13 +46,14 @@
             <div class="heading">Genres:</div>
             <div class="info">{{data.volumeInfo.categories.[0]}}<br></div>
             </div>
-            <div class="titles">
+            <div class="titles" style="display: flex; flex-wrap: wrap">
             <div class="heading">Preview Link:</div>
             <div class="info"><a href="{{data.volumeInfo.previewLink}}" target="_blank">Click here</a><br></div>
             </div>
         </div>
-
+<div align="center">
                 <button id="btn">View pdf</button><br>
+</div>
         </div>
     </div>
 </div>
