@@ -22,6 +22,53 @@ app.use(express.static('public'));
 app.set('view engine','hbs');
 app.set('views','views');
 
+const sql=require('mysql');
+let config={
+    "host":'localhost',
+    "user":'shradha-khapra',
+    "password": 'shradha@123',
+    "database":'libofly'
+
+}
+let connection =sql.createConnection(config);
+function connect(){
+
+    connection.connect();
+}
+
+app.post('/signup',function(req,res){
+    addUser(req.body.username,req.body.password);
+    res.render('main',{});
+});
+
+function addUser(user,pass){
+
+    let query=`insert into users (username,password) values ('${user}','${pass}')`;
+    connection.query(query,function(err,data){
+        if(err) console.log("error");
+
+    })
+}
+function checkUser(user,pass,abcd){
+
+    let query=` SELECT password FROM users WHERE username='${user}'`;
+    connection.query(query,function(err,data){
+        if(data[0]==undefined)  {
+            console.log("in if");
+           let a= false;
+           abcd(a);
+        }
+         else {
+            console.log(" else");
+            console.log(data[0].password);
+           let a= true;
+            abcd(a);
+        }
+
+    });
+
+}
+
 app.use(function(req,res,next){
     res.setHeader('Access-Control-Allow-Origin','*');
     next();
@@ -30,53 +77,47 @@ app.get('/',(req,res)=>{
     res.render('login',{});
 });
 
-
 app.post('/login',passport.authenticate('local',
     {
-        successRedirect:'/abcd',
+        successRedirect:'/login',
         failureRedirect:'/'
     }
 ));
 
 passport.use(new passportLocal(
     function(username,password,done){
-        console.log(username);
-        console.log(password);
-        if(username!=userconfig.username)
-        {   console.log("invalid username");
-            return done(null,false);}
-        if(password!=userconfig.password)
-        {    console.log("invalid password");
-            return  done(null,false);}
+      checkUser(username,password,function(a){
 
-        return done(null,userconfig.id);
+          return done(null,a);
+     });
+
+        // if(username!=userconfig.username)
+        // {   console.log("invalid username");
+        //     return done(null,false);}
+        // if(password!=userconfig.password)
+        // {    console.log("invalid password");
+        //     return  done(null,false);}
+
+
     }
 ));
 
-passport.serializeUser(function(id, done) {
-    console.log("serialize");
-    return  done(null, id);
+passport.serializeUser(function(a, done) {
+
+    return  done(null,a);
 });
 
-passport.deserializeUser(function(id, done) {
-    console.log("deserialize");
-    if(userconfig.id==id)
-    { return  done(null, userconfig.username);}
+passport.deserializeUser(function(a, done) {
+
+    if(a){
+
+    return  done(null, userconfig.username);}
 });
-app.get('/abcd',function(req,res){
-    console.log("shruti ka abcd");
+app.get('/login',function(req,res){
+
     res.render('main',{});
 
 })
-
-
-
-
-
-// app.get('/login',(req,res)=>{
-//     console.log("a");
-//     res.render('main',{});
-// });
 
 app.get('/main',function(req,res){
     let xhr= require('xmlhttprequest').XMLHttpRequest;
@@ -89,13 +130,13 @@ app.get('/main',function(req,res){
 
         }
     };
-    // let y=JSON.parse(req.query.val);
-    console.log((req.query.val));
+
     xhttp.open("GET", `https://www.googleapis.com/books/v1/volumes/${req.query.val}`, true);
     xhttp.send();
 
 });
 app.listen(port,function(){
+    connect();
     console.log("application running on port "+port);
 
 });
