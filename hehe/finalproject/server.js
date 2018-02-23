@@ -67,7 +67,7 @@ app.get('/abcd',function(req,res){
     console.log("shruti ka abcd");
     res.render('main',{});
 
-})
+});
 
 
 
