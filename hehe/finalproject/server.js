@@ -9,7 +9,6 @@ const passportLocal=require('passport-local').Strategy;
 const cookieParser=require('cookie-parser');
 const session=require('express-session');
 const userconfig=require('./userconfig.json');
-
 app.use(cookieParser());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
@@ -25,11 +24,11 @@ app.set('views','views');
 const sql=require('mysql');
 let config={
     "host":'localhost',
-    "user":'shradha-khapra',
-    "password": 'shradha@123',
+    "user":'gargshruti30',
+    "password": 'Shruti123',
     "database":'libofly'
 
-}
+};
 let connection =sql.createConnection(config);
 function connect(){
 
@@ -124,7 +123,7 @@ app.get('/login',function(req,res){
 
     res.render('main',{});
 
-})
+});
 
 app.get('/main',function(req,res){
     let xhr= require('xmlhttprequest').XMLHttpRequest;
